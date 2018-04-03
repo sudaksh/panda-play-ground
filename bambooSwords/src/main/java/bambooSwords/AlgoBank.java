@@ -123,52 +123,52 @@ public class AlgoBank {
     }
     
     
-    public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
-
-        int i =0 ,j =0 ,k =0 , kmax;
-        int median1 , median2;
-        kmax = (nums1.length + nums2.length) / 2;
-
-        while(i < nums1.length && j < nums2.length){
-            if(nums1[i] < nums2[j]){
-                if(k == kmax){
-                    return nums1[i];
-                    
-                }
-                
-                i++;
-            } else {
-                
-                if(k == kmax){
-                    return nums2[j] ;
-                }
-                j++;
-            }
-            k++;
-        }
-        
-        if(i == nums1.length){
-            while(k<=kmax){
-//                combined[k] = nums2[j];
-                j++;
-                k++;
-                if(k == kmax){
-                    return nums2[j] ;
-                }
-            }
-        } else if (j == nums2.length){
-            while(k<=kmax){
-//                combined[k] = nums1[i];
-                i++;
-                k++;
-                if(k == kmax){
-                    return nums2[i] ;
-                }
-            }
-        }
-
-
-    }
+//    public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
+//
+//        int i =0 ,j =0 ,k =0 , kmax;
+//        int median1 , median2;
+//        kmax = (nums1.length + nums2.length) / 2;
+//
+//        while(i < nums1.length && j < nums2.length){
+//            if(nums1[i] < nums2[j]){
+//                if(k == kmax){
+//                    return nums1[i];
+//                    
+//                }
+//                
+//                i++;
+//            } else {
+//                
+//                if(k == kmax){
+//                    return nums2[j] ;
+//                }
+//                j++;
+//            }
+//            k++;
+//        }
+//        
+//        if(i == nums1.length){
+//            while(k<=kmax){
+////                combined[k] = nums2[j];
+//                j++;
+//                k++;
+//                if(k == kmax){
+//                    return nums2[j] ;
+//                }
+//            }
+//        } else if (j == nums2.length){
+//            while(k<=kmax){
+////                combined[k] = nums1[i];
+//                i++;
+//                k++;
+//                if(k == kmax){
+//                    return nums2[i] ;
+//                }
+//            }
+//        }
+//
+//
+//    }
 
 
     
