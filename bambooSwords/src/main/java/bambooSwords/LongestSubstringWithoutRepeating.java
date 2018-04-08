@@ -1,5 +1,6 @@
 package bambooSwords;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class LongestSubstringWithoutRepeating {
@@ -20,8 +21,8 @@ public class LongestSubstringWithoutRepeating {
         int first = 0;
 
         HashMap<Character, Integer> position = new HashMap<>();
-        int i = 0;
-        for (Character c : s.toCharArray()){
+        for (int i = 0; i < s.length(); i++){
+            Character c = s.charAt(i);
             if (position.containsKey(c)){
                 if (position.get(c) >= first){ // only calculate length when meet the first character from the string, don't count the one before it
                     result = Math.max(result, i - first);
@@ -29,9 +30,35 @@ public class LongestSubstringWithoutRepeating {
                 }
             }
             position.put(c, i);
-            i++;
         }
-        if (first != i) result = Math.max(result, i - first); // final step test!
+        if (first != s.length()) result = Math.max(result, s.length() - first); // final step test!
+        return result;
+    }
+
+    /*
+    Faster method by using array to record positions
+
+    Note: Characters, 256!
+     */
+
+    public int lengthOfLongestSubstring2(String s){
+        if (s == null || s.length() == 0) return 0; // first test!
+        if (s.length() == 1) return 1;
+        int result = 0;
+        int first = 0;
+
+        int[] map = new int[256];
+        Arrays.fill(map, -1); // good to use
+        for (int i = 0; i < s.length(); i++){
+            Character c = s.charAt(i);
+            if (map[c] >= first) { // map[character]
+                result = Math.max(result, i -first);
+                first = map[c] + 1;
+            }
+            map[c] = i;
+        }
+
+        if (first != s.length()) result = Math.max(result, s.length() - first);
         return result;
     }
 }
