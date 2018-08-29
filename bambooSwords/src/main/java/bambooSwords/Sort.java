@@ -177,4 +177,12 @@ public class Sort {
 
     }
 
+    /*
+    Bucket sort is mainly useful when input is uniformly distributed over a range.
+    First, generate buckets and allocate elements into buckets.
+    And use quick sort to sort elements in each bucket.
+     */
+    public void bucketSort(int[] nums){
+        if (nums == null || nums.length <= 1) return;
+    }
 }
