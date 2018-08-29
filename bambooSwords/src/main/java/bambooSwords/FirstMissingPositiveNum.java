@@ -29,5 +29,21 @@ public class FirstMissingPositiveNum {
     	}
     	return result;
     }
+    
+    
+    
+	// [1,2,3,5,8,6,9,7,10,15,13,14,12,11]
+	// [3,4,-1,1]
+
+
+    public int firstMissingPositive2(int[] nums) {
+    	
+    	
+    	
+    	
+    	
+    	
+    	return 1;
+    }
 
 }
