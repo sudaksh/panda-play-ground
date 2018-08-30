@@ -2,7 +2,7 @@ package bambooSwords;
 
 import org.junit.Test;
 
-public class testLongestPalindrome {
+public class TestLongestPalindrome {
 
     @Test
     public void test(){

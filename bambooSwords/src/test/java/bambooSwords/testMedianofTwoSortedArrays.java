@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class testMedianofTwoSortedArrays {
+public class TestMedianofTwoSortedArrays {
 
     @Test
     public void test(){
