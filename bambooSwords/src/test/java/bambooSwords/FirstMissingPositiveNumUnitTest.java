@@ -21,4 +21,10 @@ public class FirstMissingPositiveNumUnitTest {
     }
     
     
+    @Test
+    public void testFindFirstMissingPositive2() {
+    	assertEquals(10, missingPositiveNum.firstMissingPositive(new int[] {7,5,6,2,8,-1,-4,-5,1,2,-2,-7,3,4,9,11,13,15}));
+    }
+    
+    
 }
