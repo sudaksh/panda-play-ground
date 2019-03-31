@@ -1,9 +1,7 @@
 package bambooSwords;
 
-import org.junit.Assert;
+import bambooSwords.sort.MedianofTwoSortedArrays;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 public class TestMedianofTwoSortedArrays {
 

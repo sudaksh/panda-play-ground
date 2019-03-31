@@ -1,5 +1,6 @@
 package bambooSwords;
 
+import bambooSwords.sort.WiggleSortII;
 import org.junit.Test;
 
 public class WiggleSortIIUnitTest {
